@@ -1,6 +1,5 @@
 Router.configure({
   layoutTemplate: 'layout',
-  notFoundTemplate: 'notFound',
   loadingTemplate: 'loading',
 });
 
@@ -11,8 +10,11 @@ Router.map(function() {
   });
 
   this.route('Info', {
-    path: '/userinfo',
+    path: '/login',
     template: 'userinfo',
+    data: function() {
+      return Meteor.user();
+    },
   });
 
   //this.route('CharacterList', {

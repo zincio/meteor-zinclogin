@@ -1,12 +1,5 @@
-AccountsTemplates.configure({
-  hideSignUpLink: true,
-});
-
-AccountsTemplates.configureRoute('signIn', {
-  redirect: function() {
-    var user = Meteor.user();
-    if (user) {
-      Router.go('Info');
-    }
+Template.userinfo.helpers({
+  jsonPrint: function(obj) {
+    return JSON.stringify(obj);
   },
 });

@@ -1,10 +1,7 @@
 <template name="layout">
-  {{#ionBody}}
-    {{>ionNavBar class="bar-dark"}}
-    {{#ionNavView}}
+  <body>
       {{>yield}}
-    {{/ionNavView}}
-  {{/ionBody}}
+  </body>
 </template>
 
 <template name="loading">

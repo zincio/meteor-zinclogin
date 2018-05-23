@@ -7,13 +7,14 @@ Package.describe({
 });
 
 Package.onUse(function(api) {
-  // api.versionsFrom('METEOR@1.1.1');
+  api.versionsFrom('METEOR@1.5.2.2');
   api.use('accounts-base', ['client', 'server']);
   api.use('accounts-oauth', ['client', 'server']);
   api.use('oauth', ['client', 'server']);
   api.use('oauth2', ['client', 'server']);
   api.use('http', ['client', 'server']);
   api.use('service-configuration', ['client', 'server']);
+  api.use(['ecmascript', 'babel-runtime']);
   api.use('underscore', ['client', 'server']);
   api.use(['random', 'templating@1.0.11'], 'client');
 
